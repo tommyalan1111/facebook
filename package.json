@@ -1,0 +1,24 @@
+{
+  "name": "facebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auth:save": "tsx scripts/save-login.ts",
+    "test:all": "npm run login && npm run home",
+    "login": "npx playwright test --project=chromium tests/login.spec.ts",
+    "login:headed": "npx playwright test --project=chromium tests/login.spec.ts --headed",
+    "home": "npx playwright test --project=chromium tests/home.spec.ts",
+    "home:headed": "npx playwright test --project=chromium tests/home.spec.ts --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "dotenv": "^18.0.7",
+    "tsx": "^4.23.15"
+  }
+}
